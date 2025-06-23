@@ -1,0 +1,186 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome} % For photo icon
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Animesh Sahu} \\ \vspace{1pt} % Removed the photo icon
+    \small +919415040870 $|$ \href{mailto:anisahu99@gmail.com}{\underline{anisahu99@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/animeshsahu1999/}{\underline{linkedin.com/in/animesh}} $|$
+    \href{https://github.com/anisahu99/}{\underline{github.com/animesh}} $|$
+    \href{https://leetcode.com/u/animeshsahu/}{\underline{leetcode.com/u/animesh}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Information Technology, Bhopal}{Bhopal, Madhya Pradesh}
+      {Bachelor of Technology in Electronics and Comunication Engineering CGPA: 8.02}{Dec. 2020 -- May 2024}
+    \resumeSubheading
+      {Triveni Kashi Inter College}{Bihar, Uttar Pradesh}
+      {12th (Intermediate), Uttar Pradesh State Board of High School and Intermediate Education}{April 2016 -- May 2018}
+    \resumeSubheading
+      {Triveni Kashi Inter College}{Bihar, Uttar Pradesh}
+      {10th (High School), Uttar Pradesh State Board of High School and Intermediate Education}{April 2014 -- May 2016}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+\resumeSubheading
+      {Software Engineer Intern}{Oct. 2024 -- Jan. 2025}
+      {\textbf{Appaxon Solutions}}{Remote (Delhi, India)}
+      \resumeItemListStart
+    \resumeItem{Developed and enhanced backend applications by implementing new features and optimizing existing ones.}
+    \resumeItem{Developed and implemented RESTful APIs following Clean Architecture principles to ensure modularity, scalability, and maintainability of backend applications.}
+    \resumeItem{Designed and integrated custom middleware to handle business logic, enabling efficient request and response manipulation and applying object-oriented programming (OOPs) concepts for clean and reusable code.}
+\resumeItemListEnd
+
+  
+    \resumeSubheading
+      {Full Stack Developer Intern}{July 2024}
+      {\textbf{Zoho}}{Chennai, India}
+      \resumeItemListStart
+    \resumeItem{Developed and deployed RESTful APIs using Apache Tomcat, following MVC architecture and implementing robust user input validation for data integrity and security.}
+    \resumeItem{Designed and implemented custom Kafka synchronization logic, gaining hands-on experience in distributed systems, message brokering, and microservices architecture.}
+    \resumeItem{Built and optimized a gRPC-based client-server application using protocol buffers for efficient file transfers, improving performance and scalability.}
+\resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+          {\textbf{E-Commerce Platform} $|$ \emph{React, Tailwind, Node.js, Express.js, PostgreSQL, MongoDB}}{\href{https://github.com/anisahu99/E-Commerce-Platform}{\underline{Github}}}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack e-commerce platform with user authentication, product management, and order processing.}
+            \resumeItem{Designed and built RESTful APIs with error handling, middleware, and JWT-based role-based access control for users and admins.}
+            \resumeItem{Designed and maintained database schemas, optimized queries, and implemented global state management for better performance and maintainability.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Store Locator on Map} $|$ \emph{HTML, CSS, JavaScript, Node.js, Express.js, MongoDB}}{\href{https://github.com/anisahu99/Store_Locator_On_Map}{\underline{Github}}}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack web app with Mapbox for geospatial visualization, real-time plotting, and interactive maps.}
+            \resumeItem{Developed a RESTful API with Express, MongoDB, and Mongoose for geoJSON support, and created a form-based interface with vanilla JavaScript.}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: C/C++, Java, JavaScript, TypeScript, C\#, Python, SQL, HTML/CSS} \\
+     \textbf{Frameworks \& Libraries}{: React, Node.js, Express.js, Redux, Tomcat, Apache Struts, .NET, gRPC} \\
+     \textbf{Tools \& Platforms}{: Git, GitHub, Docker, VS Code, Eclipse, Postman, Linux} \\
+     \textbf{Databases}{: MySQL, PostgreSQL, MongoDB, Redis} \\
+    }}
+ \end{itemize}
+
+ %-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\begin{itemize}
+    \item Resolved 800+ DSA problems on \textbf{LeetCode}, \textbf{GeeksforGeeks}, \textbf{Codeforces}, and \textbf{CodeChef}, refining problem-solving skills.
+    \item Achieved a top \textbf{6.6\%} rank in \textbf{LeetCode’s weekly and biweekly contests}.
+    \item Attained a top \textbf{4.24\%} rank in the \textbf{JEE Mains Examination}.
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
