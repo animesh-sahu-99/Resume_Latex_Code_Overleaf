@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Animesh Sahu} \\ \vspace{1pt}
+    \small +919415040870 $|$ \href{mailto:anisahu99@gmail.com}{\underline{anisahu99@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/animeshsahu1999/}{\underline{linkedin.com/in/animesh}} $|$
+    \href{https://github.com/anisahu99/}{\underline{github.com/animesh}} $|$
+    \href{https://leetcode.com/u/animeshsahu/}{\underline{leetcode.com/u/animesh}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Information Technology, Bhopal}{Bhopal, Madhya Pradesh}
+      {Bachelor of Technology in Electronics and Communication Engineering | CGPA: 8.02}{Dec. 2020 -- May 2024}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {Full Stack Developer Intern}{May 2025 -- June 2025}
+  {Web5 Solution}{Gurgaon, India}
+  \resumeItemListStart
+    \resumeItem{Developed cross-platform mobile features using React Native and integrated them with existing React web components.}
+    \resumeItem{Refactored backend logic by migrating services from PHP to Node.js, improving maintainability and scalability.}
+  \resumeItemListEnd
+
+    \resumeSubheading
+      {Dot Net Development Intern}{Feb. 2025 -- May. 2025}
+      {Poxo RFID Automation}{Remote (Delhi, India)}
+      \resumeItemListStart
+        \resumeItem{Designed and developed responsive UI/UX for the entire web application, focusing on user-friendly and responsive design.}
+        \resumeItem{Designed and implemented RESTful APIs to handle CRUD operations for core business features, improving system scalability and modularity.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Software Engineer Intern}{Oct. 2024 -- Jan. 2025}
+      {Appaxon Solutions}{Remote (Delhi, India)}
+      \resumeItemListStart
+        \resumeItem{Developed and enhanced backend applications by implementing new features and optimizing existing ones.}
+        \resumeItem{Developed and implemented RESTful APIs following Clean Architecture principles to ensure modularity, scalability, and maintainability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full Stack Developer Intern}{July 2024 -- Aug. 2024}
+      {Zoho}{Chennai, India}
+      \resumeItemListStart
+        \resumeItem{Developed and deployed RESTful APIs using Apache Tomcat, following MVC architecture with robust user input validation.}
+        \resumeItem{Designed and implemented custom Kafka synchronization logic, gaining experience in distributed systems and microservices.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+          {\textbf{Health Care System} $|$ \emph{Java, Spring Boot, Hibernate, Microservices, Kafka, gRPC}}{\href{https://github.com/anisahu99/Store_Locator_On_Map}{\underline{Github}}}
+          \resumeItemListStart
+            \resumeItem{Built Appointment, Patient, and Doctor services using Spring Boot, enabling concurrent bookings.}
+            \resumeItem{Implemented distributed locking with Redis to prevent overbooking, reducing scheduling conflicts by 90\%.}
+            \resumeItem{Implemented Kafka events for appointment lifecycle (created/updated/cancelled), reducing API calls between services by 60\%}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{E-Commerce Platform} $|$ \emph{React.js, Redux, Tailwind, Node.js, Express.js, Jwt, PostgreSQL, MongoDB}}{\href{https://github.com/anisahu99/E-Commerce-Platform}{\underline{Github}}}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack e-commerce platform with user authentication, product management, and order processing.}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: C/C++, Java, JavaScript, TypeScript, C\#, Python, Rust, SQL, Bash, HTML5, CSS3} \\
+     \textbf{Frameworks \& Libraries}{: React.js, Next.js, Node.js, Express.js, Redux, Jest, Tomcat, Spring Boot, Microservices, .NET, gRPC} \\
+     \textbf{Tools \& Platforms}{: Git, GitHub, Docker, VS Code, Visual Studio, Eclipse, IntelliJ Postman, Linux} \\
+     \textbf{Databases}{: MySQL, PostgreSQL, MSSQL, MongoDB, Redis}
+    }}
+ \end{itemize}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+  \begin{itemize}
+    \item Resolved 800+ DSA problems on \textbf{LeetCode}, \textbf{GeeksforGeeks}, \textbf{Codeforces}, and \textbf{CodeChef}, refining problem-solving skills.
+    \item Achieved a top \textbf{6.6\%} rank in \textbf{LeetCode's weekly and biweekly contests}.
+    \item Attained a top \textbf{4.24\%} rank in the \textbf{JEE Mains Examination}.
+  \end{itemize}
+
+%-------------------------------------------
+\end{document}
