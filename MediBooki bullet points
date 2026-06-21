@@ -1,0 +1,61 @@
+\project{MediBook}{Spring Boot 3.5, PostgreSQL, React Native, TypeScript, Redux Toolkit, WebSocket}{\projectlink{https://github.com/animesh-sahu-99/doc-appoint}}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=4pt]
+  \item Built a full-stack doctor-appointment platform -- a \textbf{Spring Boot 3.5} (Java 17) REST API and a \textbf{React Native} (TypeScript) app -- with \textbf{JWT}-secured, role-based auth for patient and doctor flows
+  \item Prevented double-booking of slots under concurrent requests using \textbf{JPA optimistic locking} (\texttt{@Version}) with automatic \textbf{retry and exponential backoff}, ensuring consistency without pessimistic DB locks
+  \item Engineered \textbf{dual-channel real-time notifications} -- STOMP \textbf{WebSocket} for in-app updates and \textbf{Firebase Cloud Messaging} for background push -- with device-token lifecycle and role-aware deep-linking
+  \item Built dynamic doctor discovery using \textbf{JPA Specifications} with multi-criteria filters (specialization, fee, experience, rating, availability) and paginated, indexed queries
+\end{itemize}
+
+
+% =================== A. FULL-STACK SCOPE & ARCHITECTURE ===================
+\item Built a full-stack doctor-appointment platform -- a \textbf{Spring Boot 3.5} (Java 17) REST API and a \textbf{React Native} (TypeScript, strict) app -- supporting separate patient and doctor experiences   % [TOP PICK]
+\item Designed a layered \textbf{controller--service--repository} architecture across 10 JPA entities, 13 services, and \textasciitilde10 controllers (\textasciitilde60 REST endpoints)
+\item Documented the full REST API with \textbf{OpenAPI/Swagger} (SpringDoc)
+\item Modeled the domain in \textbf{PostgreSQL} with unique constraints (phone + country) and composite indexes
+
+% =================== B. AUTHENTICATION & SECURITY ===================
+\item Implemented \textbf{JWT} (HS256) authentication with \textbf{BCrypt} password hashing and \textbf{role-based authorization} (doctor/patient) on a stateless Spring Security filter chain   % [TOP PICK]
+\item Built a custom \texttt{JwtAuthFilter} that validates token signature/expiry and injects role and userId claims on every request
+\item Configured stateless sessions, CORS, and a token-based security model for the mobile client
+\item Implemented \textbf{AES-256} encrypted upload and storage of clinical documents with role-based access control   % [verify implementation before relying on it]
+
+% =================== C. CONCURRENCY & DATA INTEGRITY ===================
+\item Prevented double-booking of doctor slots under concurrent requests using \textbf{JPA optimistic locking} (\texttt{@Version}) with automatic \textbf{retry and exponential backoff} (\texttt{@Retryable}, 3 attempts), ensuring consistency without pessimistic DB locks   % [TOP PICK]
+\item Wrapped booking and state-transition logic in \texttt{@Transactional} boundaries for ACID guarantees
+\item Enforced appointment state transitions and unique appointment numbers via a JPA entity listener
+
+% =================== D. REAL-TIME NOTIFICATIONS ===================
+\item Engineered \textbf{dual-channel real-time notifications} -- STOMP \textbf{WebSocket} for in-app updates and \textbf{Firebase Cloud Messaging} for background push -- fanned out to both patient and doctor on each event   % [TOP PICK]
+\item Built an FCM \textbf{device-token lifecycle} (registration, refresh handling, auto-deactivation of stale tokens)
+\item Implemented role-aware \textbf{deep-linking} from push notifications to the relevant appointment screen
+
+% =================== E. DOCTOR DISCOVERY / SEARCH ===================
+\item Built dynamic doctor discovery using \textbf{JPA Specifications} with multi-criteria filters (specialization, fee, experience, rating, availability) and paginated, indexed queries   % [TOP PICK]
+\item Auto-computed each doctor's average rating and review count for ranking and display
+
+% =================== F. APPOINTMENT & SLOT MANAGEMENT ===================
+\item Implemented the full appointment lifecycle (\texttt{PENDING $\rightarrow$ CONFIRMED $\rightarrow$ COMPLETED/CANCELLED/NO\_SHOW}) with doctor confirm/complete/no-show actions
+\item Built \textbf{bulk slot creation} and date-scoped availability queries with flexible 15--60 minute durations
+
+% =================== G. REVIEWS & RATINGS ===================
+\item Built a \textbf{ratings \& reviews} system (1--5 stars with comments) with doctor replies and auto-aggregated per-doctor averages
+
+% =================== H. MOBILE -- STATE & DATA LAYER ===================
+\item Architected the mobile data layer with \textbf{Redux Toolkit + RTK Query} (33 endpoints) using \textbf{tag-based cache invalidation} for live data coherence   % [TOP PICK]
+\item Built a \textbf{401 interceptor} that auto-detects session expiry, resets the cache, and forces re-login
+\item Persisted auth state with \textbf{redux-persist + encrypted storage} for secure, cross-session tokens
+\item Implemented type-safe forms with \textbf{react-hook-form + Zod} validation schemas
+
+% =================== I. MOBILE -- REAL-TIME, NAVIGATION & UX ===================
+\item Built a resilient \textbf{STOMP WebSocket} client with auto-reconnect, heartbeats, and foreground re-connection
+\item Built an \textbf{FCM push} handler for foreground/background/quit states with Android 13+ runtime permissions
+\item Structured \textbf{role-based navigation} (React Navigation v6): conditional Auth / Patient-tab / Doctor-tab stacks with modal overlays
+\item Delivered 18 screens and 10 reusable UI components with \textbf{NativeWind/Tailwind} theming and dark-mode support
+\item Built doctor search with a \textbf{5-filter bottom sheet} and 400\,ms-debounced queries, plus a booking flow with slot grid and price breakdown
+
+% =================== J. ENGINEERING QUALITY / SCALE ===================
+\item Centralized error handling with custom exceptions and a unified \texttt{ApiResponse<T>} response envelope
+\item Auto-managed audit timestamps (\texttt{@CreationTimestamp}/\texttt{@UpdateTimestamp}) across all entities
+
+
+
