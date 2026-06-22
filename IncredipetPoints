@@ -1,0 +1,20 @@
+% --- BOOKING INTEGRITY (race-condition fix, business framing) ---
+\item Safeguarded booking integrity across \textbf{[N]+ daily appointments}, eliminating the double-bookings that caused refunds, partner conflicts, and support escalations -- through atomic, rollback-safe slot assignment
+
+% --- REVENUE RECOVERY (Floating Clients, your 77%) ---
+\item Recovered revenue from unpaid, unassigned appointments with automated \textbf{Floating-Client} detection, cutting manual CRM reassignment by \textbf{77\%}
+
+% --- FINANCE / CASH FLOW (Razorpay, your 90%) ---
+\item Accelerated order confirmation and cut payment-reconciliation effort by \textbf{[90]\%} by integrating \textbf{Razorpay} with real-time, webhook-driven status tracking
+
+% --- OPS EFFICIENCY (Partner Lifecycle) ---
+\item Automated the full partner lifecycle, removing \textbf{[\textasciitilde X hrs/week]} of manual CRM status work and reactivating lapsed partners faster to keep service supply available
+
+% --- RETENTION / PRIVACY (Exotel) ---
+\item Enabled privacy-safe customer--partner communication that kept service coordination on-platform, with full call logging for quality and dispute resolution
+
+% --- SCALE (performance, your 25% throughput) ---
+\item Sustained \textbf{[25]\%} higher request throughput and kept ops dashboards responsive at peak load by eliminating \textbf{N+1 queries} and offloading heavy analytics to async workers
+
+% --- PARTNER GROWTH (LMS) ---
+\item Scaled partner onboarding and training via a self-serve learning platform, reducing manual training effort and standardizing service quality
