@@ -59,3 +59,25 @@
 
 
 
+% [TOP PICK] core integration
+\item Built a \textbf{Razorpay} payment API for a paid digital e-book -- order creation, \textbf{HMAC-SHA256} signature verification (timing-safe comparison), and authorize-then-capture handling -- with full \textbf{server-side re-verification} of order, amount, currency, and status before fulfillment
+
+% [TOP PICK] security / anti-tampering
+\item Hardened checkout against tampering by re-fetching each payment from Razorpay and validating the captured amount against the server-set price, rejecting any client-supplied mismatch
+
+% idempotency
+\item Made payment verification \textbf{idempotent} -- short-circuiting already-paid orders and gating capture on payment status -- to prevent double-charging and duplicate fulfillment
+
+% fulfillment / secure delivery
+\item Automated digital fulfillment with \textbf{time-limited (1-hour) AWS S3 pre-signed URLs} for secure e-book delivery, plus lead dedup (7-day window) and UTM/gclid marketing attribution
+Configuration & architecture
+% [TOP PICK] config-driven design
+\item Designed a \textbf{configuration-driven} payment module -- centralized pricing, service-type, and status constants, env-based credentials, and a lazy-initialized SDK singleton -- for a clean, reusable integration
+
+% modular architecture
+\item Architected the checkout as 8 focused service modules (validation, lead, Razorpay, order persistence, fulfillment, S3 download, sheet sync) enforcing separation of concerns
+
+% payment state machine
+\item Modeled a payment-status state machine (\texttt{PENDING $\rightarrow$ PAID/FAILED}) linking each Razorpay order to a lead record for end-to-end traceability
+Business-impact framing (if you prefer outcome-led)
+\item Launched a new \textbf{paid e-book revenue stream} end-to-end -- Razorpay checkout, secure server-verified payments, and instant digital delivery -- with built-in lead capture and UTM attribution for marketing ROI
